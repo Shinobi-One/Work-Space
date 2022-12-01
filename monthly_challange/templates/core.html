@@ -1,0 +1,19 @@
+{%load static%}
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>{% block core_title%}{% endblock  %}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static "style.css" %}">
+        {%block css_file%}{%endblock%}
+
+    </head>
+    <body>
+        {%block core_body %}{% endblock  %}
+        <script src="" async defer></script>
+    </body>
+</html>

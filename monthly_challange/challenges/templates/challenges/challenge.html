@@ -1,0 +1,20 @@
+{% extends "core.html"%}
+{%load static%}
+<!DOCTYPE html>
+
+    {%block core_title %}All CHALLENGES !!{%endblock core_title%}
+
+    {%block css_file %}
+    <link rel="stylesheet" href="{%static "challenges/challenge.css"%}">
+    <link rel="stylesheet" href="{% static "challenges/header/header.css" %}">
+    {%endblock css_file%}
+
+    {%block core_body%}
+        {% include "challenges\header\header.html" %}
+        <h1>{{month_list|title}} 's Challenges Will Be </h>
+        {%if text is not None %}
+            <h2>{{text}}</h2>
+        {%else%}
+            <p>This Month Is Not Supported My Friend</p>
+        {%endif%}
+    {%endblock core_body%}
