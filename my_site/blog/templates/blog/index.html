@@ -1,0 +1,44 @@
+{%extends "core.html" %}
+{%load static%}
+
+
+
+{%block core_title %}
+    Welcome Traveler this is my blog !
+{% endblock %}
+
+{%block css_files %}
+    <link rel="stylesheet" href="{% static "blog/post.css" %}"/>   
+    <link rel="stylesheet" href="{% static "blog/index.css" %}"/>
+{%endblock%}
+
+
+{%block core_body%}
+<section id="welcome">
+    <header>
+        <img src="{%static "blog\images\Geneichiro.jpg" %}" alt="Hosein The Author of this blog"/>
+        <h2> MR.V Blog </h2>
+    </header>
+        <p> Hi I'm Hosein Vazife and I love to blog about tech and programming !</p>
+</section>
+
+<section id="latest-posts">
+    <h2> My Latest Thoughts </h2>
+    <ul>
+        {% for item in post %}
+            {% include "blog/include/post.html" %}
+        {% endfor %}
+    </ul>
+</section>
+
+<section id="about">
+    <h2>What I Do ?</h2>
+    <p>Welcome to my blog , I love programming and help people to get better 
+    </p>
+    <p> my goal is to be a good developer and I would be honored
+        if you could help me
+    </p>
+</section>
+{% endblock %}
+
+
